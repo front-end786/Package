@@ -1,0 +1,27 @@
+{
+  "name": "react-ecosystem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A modular ecosystem of developer tools for React applications.",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present"
+  },
+  "keywords": [
+    "react",
+    "ecosystem",
+    "developer-tools"
+  ],
+  "author": "Asad Ullah",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

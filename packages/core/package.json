@@ -1,0 +1,8 @@
+{
+  "name": "@react-ecosystem/core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Framework-independent async and data management engine.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts"
+}
