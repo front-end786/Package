@@ -1,5 +1,5 @@
 
-export type QueryStatus = 
+export type QueryStatus =
   | "idle"
   | "pending"
   | "success"
@@ -11,13 +11,17 @@ export interface QueryState<TData = unknown> {
   status: QueryStatus;
   isFetching: boolean;
   updatedAt: number | null;
+  isInvalidated: boolean;
 }
 
 export interface QueryOptions<TData> {
   key: readonly unknown[];
+
   queryFn: (context: {
     signal: AbortSignal;
   }) => Promise<TData>;
+
+  staleTime?: number;
 }
 
 export interface QueryResult<TData> {
